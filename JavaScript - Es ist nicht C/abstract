@@ -1,0 +1,24 @@
+JavaScript - Es ist nicht C
+
+* Scope, Closure und Lambda
+    o Welche Scopes kennt JavaScript?
+    o Labda & Closure
+    o Callbacks in JavaScript vs, PHP (< 5.3)
+    o Methodstealing
+
+* Der Unterschied von prototypbasiertem Objektmodell und klassenbassiertem Objektmodell
+    o Gibt es in JavaScript Klassen oder nicht?
+    o Wie soll man mit JavaScript OOP machen, wenn es kein public oder private kennt?
+    o Vererbung ohne Klassen
+    o Ducktyping
+    
+* The good parts
+    o In Anlehnung an DAS Referenzwerk
+    o Variable-Shadowing
+    o undefined versus null
+    o Memory Leaks
+
+* Mehr Futter für das Hirn
+    o Libraries & Frameworks
+    o NodeJS & CouchDB
+    o The JavaScript Ninja
