@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstarct&gt;&gt;
+AbstracteKlasse</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>190</x>
+      <y>20</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>/AbstracteKlasse/</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>30</x>
+      <y>30</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+ClassName
+--
+proeprty1
+property2
+property3
+--
+method1()
+method2()
+method3()</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

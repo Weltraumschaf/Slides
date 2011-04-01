@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>20</x>
+      <y>30</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DAL-Entity&gt;&gt;
+FencyClass
+--
+-name: string = ""
+-id: int
+-date: SC_Date
+--
++getName(): string
++setName(name: string = "")
++getId(): int
++setId(id: int)
++getDate(): SC_Date
++setDate(d: SC_Date)</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
