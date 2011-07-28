@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><umlet_diagram><help_text>// Uncomment the following line to change the fontsize:
+// fontsize=14
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on UML elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold ⌘ to select multiple elements
+// Use ⌘+mouse to select via lasso
+//
+// Use ± or ⌘+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press ⌘+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text><zoom_level>10</zoom_level><element><type>com.umlet.element.base.Class</type><coordinates><x>350</x><y>60</y><w>180</w><h>130</h></coordinates><panel_attributes>SimpleClass
+--
+-foo:string
+-bar:bool
+--
++__construct(foo:string)
++doSomeMagic()
++getFoo():string
++isBar():bool</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Class</type><coordinates><x>40</x><y>100</y><w>180</w><h>80</h></coordinates><panel_attributes>SimpleClassTest
+--
+--
+#setUp()
+#tearDown()
++testDoSomeMagic()</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>190</x><y>90</y><w>180</w><h>70</h></coordinates><panel_attributes>lt=-
+testet&gt;</panel_attributes><additional_attributes>30;50;160;50</additional_attributes></element><element><type>com.umlet.element.base.Class</type><coordinates><x>20</x><y>20</y><w>220</w><h>30</h></coordinates><panel_attributes>/PHPUnit_Framework_TestCase/
+</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>100</x><y>20</y><w>50</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>30;30;30;80</additional_attributes></element><element><type>com.umlet.element.base.Note</type><coordinates><x>450</x><y>230</y><w>290</w><h>80</h></coordinates><panel_attributes>public function __construct($foo = '') {
+	$this-&gt;foo = $foo;
+	$this-&gt;bar = false;
+}</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>500</x><y>100</y><w>120</w><h>150</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>30;30;100;130</additional_attributes></element><element><type>com.umlet.element.base.Note</type><coordinates><x>140</x><y>220</y><w>260</w><h>100</h></coordinates><panel_attributes>public function doSomeMagic() {
+	if (strlen($this-&gt;getFoo() &gt; 10) {
+		$this-&gt;bar = true;
+	}
+}</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>230</x><y>120</y><w>150</w><h>120</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>130;30;30;100</additional_attributes></element><element><type>com.umlet.element.base.Note</type><coordinates><x>580</x><y>40</y><w>80</w><h>30</h></coordinates><panel_attributes>SUT
+bg=red</panel_attributes><additional_attributes/></element><element><type>com.umlet.element.base.Relation</type><coordinates><x>500</x><y>20</y><w>100</w><h>80</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>30;60;80;30</additional_attributes></element></umlet_diagram>
