@@ -2,6 +2,7 @@
 
 ## Company Facts
 
+- after Kraft-Foods Milka most selled chocolate in Gemrany
 - "Ritter Sport" is brand of chocolate for the Alfred Ritter GmbH & Co. KG
 - headquartered in Waldenbuch Germany
 - founded 1912 in Bad Canstatt
@@ -38,6 +39,22 @@
 - do not use nuvlear power
 - has solar panels and combined heat and power plant
 - commendable terms for employes
+
+## Brand Eins
+
+- farmers from Nicaragua delivers to 2001 founded Ritter Sport Nicaragua SA
+- works with 21 cooperatives, 4500 fmilies live on that
+- it pays more than usual, but not only money: they provide seeds and credits
+- a farmer earns 3000 $, after commisions 1800 $, which is much in a country where 80 % live from 2 $ and less a day
+- at resource exchanges the ton cocoa costs 2300 $, Ritter pays 3500 $ per ton plus 2012 a bonus of 500 $ for 100 year anniversary
+- they not only altruists, they follow startegy
+	- Ritter is bigges buyer in Nicaragua
+	- they want to obstruct competitors from the market, because cocoa as resource will become rare (Production of cocoa dropped due to dumping prices causes that most farmers stop investing in cocoa planting.)
+	- become independend from vraiabilities at exchanges
+	- become independend from the three big cocoa players: Cargill, ADM, Barry Callebaut
+- actually Ritter obtains 4% (600 t) from Nicaragua, target is 13 %, later 20 %
+	
+[Source](http://www.brandeins.de/magazin/marken-und-glaubwuerdigkeit/die-symbiose.html)
 
 ## Links
 
