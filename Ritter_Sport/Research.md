@@ -36,7 +36,7 @@
 ## At The Headquarters
 
 - in Waldenbuch very high reputation
-- do not use nuvlear power
+- do not use nuclear power
 - has solar panels and combined heat and power plant
 - commendable terms for employes
 
