@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=1024, user-scalable=no">
 
-  <title>Your deck.js Presentation</title>
+  <title>Common Test Utils</title>
 
   <!-- Required stylesheet -->
   <link rel="stylesheet" media="screen" href="core/deck.core.css">
@@ -39,56 +39,161 @@
     </section>
 
     <section class="slide">
-        <h2>JavaDefaultLocale Rule</h2>
+        <h2>Java Default Locale Rule</h2>
         <script type="syntaxhighlighter" class="brush: java">
-            public class TestSomething {
+        public class TestSomething {
 
-                private Locale backup;
-    
-                @Before
-                public void setLocale() {
-                    backup = Locale.getDefault();
-                    Locale.setDefault(Locale.ENGLISH);
-                }
-    
-                @After
-                public void restoreLocale9) {
-                    Locale.setDefault(backup);    
-                }
+            private Locale backup;
 
-                @Test
-                public void testSomeThing() {
-                    ...
-                }
+            @Before
+            public void setLocale() {
+                backup = Locale.getDefault();
+                Locale.setDefault(Locale.ENGLISH);
             }
+
+            @After
+            public void restoreLocale9) {
+                Locale.setDefault(backup);    
+            }
+
+            @Test
+            public void testSomeThing() {
+                ...
+            }
+        }
         </script>
     </section>
     
     <section class="slide">
-        <h2>JavaDefaultLocale Rule</h2>
+        <h2>Java Default Locale Rule</h2>
         <script type="syntaxhighlighter" class="brush: java">
-            public class TestSomething {
+        public class TestSomething {
 
-                @Rule 
-                public final JavaDefaultLocale localeRule = new JavaDefaultLocale(Locale.ENGLISH);
-    
-                @Test
-                public void testSomeThing() {
-                    ...
-                }
+            @Rule 
+            public final JavaDefaultLocale localeRule = new JavaDefaultLocale(Locale.ENGLISH);
+
+            @Test
+            public void testSomeThing() {
+                ...
             }
+        }
         </script>
     </section>
     
+    <section class="slide">
+        <h2>Repeater Rule &ndash; RunTimes Annotation</h2>
+        <script type="syntaxhighlighter" class="brush: java">
+        public class TestSomething {
+
+            @Rule 
+            public final Repeater repeater = new Repeater();
+    
+            @Test
+            @RunTimes(100)
+            public void testSomeThing() {
+                ...
+            }
+        }
+        </script>
+    </section>
+    
+    <section class="slide">
+        <h2>Repeater Rule &ndash; RunMaxTimes Annotation</h2>
+        <script type="syntaxhighlighter" class="brush: java">
+        public class TestSomething {
+
+            @Rule 
+            public final Repeater repeater = new Repeater();
+    
+            @Test
+            @RunMaxTimes(3) // Default 5
+            public void testSomeThing() {
+                ...
+            }
+        }
+        </script>
+    </section>
+    
+    <section class="slide">
+        <h2>Captured Output Rule</h2>
+        <script type="syntaxhighlighter" class="brush: java">
+        public class TestSomething {
+
+            @Rule
+            public final CapturedOutput output = new CapturedOutput();
+
+            @Test
+            public void captureOut() {
+                output.expectOut("foobar");
+                output.expectOut(not("snafu"));
+
+                System.out.print("foobar");
+            }
+
+            @Test
+            public void captureErr() {
+                output.expectErr("foobar");
+                output.expectErr(not("snafu"));
+
+                System.err.print("foobar");
+            }
+        }
+        </script>
+    </section>
+
+    <section class="slide">
+        <h2>Delayed Repeater</h2>
+        <script type="syntaxhighlighter" class="brush: java">
+        public class TestSomething {
+    
+            @Test
+            public void testSomeThing() {
+                final SomeClass subjectUnderTest = new SomeClass();
+        
+                subjectUnderTest.doSomethingLongAsync();
+        
+                DelayedRepeater.create(500, 3).execute(new Runnable() {
+                    public void run() {
+                        assertThat(
+                            subjectUnderTest.getResult(),
+                            is("foobar"));
+                    }
+                });
+            }
+    
+        }
+        </script>
+    </section>
+    
+    <section class="slide">
+        <h2>More Infos</h2>
+        <ul>
+            <li>
+                Source: <a href="https://github.com/Weltraumschaf/commons/tree/master/commons-testing">
+                https://github.com/Weltraumschaf/commons/tree/master/commons-testing</a>
+            </li>
+            <li>
+                Project: <a href="http://blog.weltraumschaf.de/commons/testing/index.html">Maven site</a>
+            </li>
+        </ul>
+        <h3>Dependnecy</h3>
+        <script type="syntaxhighlighter" class="brush: xml">
+        <dependency>
+            <groupId>de.weltraumschaf.commons</groupId>
+            <artifactId>testing</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+        </script>
+    </section>
+                        
+    <section class="slide">
+        <h1>Q&A</h1>
+    </section>
     <!-- End slides. -->
 
     <!-- Begin extension snippets. Add or remove as needed. -->
 
-    <!-- deck.navigation snippet -->
-    <div aria-role="navigation">
-      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
-    </div>
+    
 
     <!-- deck.status snippet -->
     <p class="deck-status" aria-role="status">
