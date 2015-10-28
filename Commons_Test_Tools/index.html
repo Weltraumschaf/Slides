@@ -35,17 +35,51 @@
     <!-- Begin slides. Just make elements with a class of slide. -->
 
     <section class="slide">
-      <h1>Slide</h1>
+      <h1>Common Test Utils</h1>
     </section>
 
     <section class="slide">
-      <h1>Content</h1>
-    </section>
+        <h2>JavaDefaultLocale Rule</h2>
+        <script type="syntaxhighlighter" class="brush: java">
+            public class TestSomething {
 
+                private Locale backup;
+    
+                @Before
+                public void setLocale() {
+                    backup = Locale.getDefault();
+                    Locale.setDefault(Locale.ENGLISH);
+                }
+    
+                @After
+                public void restoreLocale9) {
+                    Locale.setDefault(backup);    
+                }
+
+                @Test
+                public void testSomeThing() {
+                    ...
+                }
+            }
+        </script>
+    </section>
+    
     <section class="slide">
-      <h1>Here</h1>
-    </section>
+        <h2>JavaDefaultLocale Rule</h2>
+        <script type="syntaxhighlighter" class="brush: java">
+            public class TestSomething {
 
+                @Rule 
+                public final JavaDefaultLocale localeRule = new JavaDefaultLocale(Locale.ENGLISH);
+    
+                @Test
+                public void testSomeThing() {
+                    ...
+                }
+            }
+        </script>
+    </section>
+    
     <!-- End slides. -->
 
     <!-- Begin extension snippets. Add or remove as needed. -->
@@ -84,6 +118,7 @@
 <script src="extensions/status/deck.status.js"></script>
 <script src="extensions/navigation/deck.navigation.js"></script>
 <script src="extensions/scale/deck.scale.js"></script>
+<script src="extensions/deck.syntaxhighlighter.js"></script>
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
