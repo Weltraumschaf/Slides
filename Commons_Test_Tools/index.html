@@ -41,9 +41,86 @@
     <!-- Begin slides. Just make elements with a class of slide. -->
 
     <section class="slide">
-      <h1>Common Test Utils</h1>
+      <h1>Test Tools</h1>
     </section>
 
+    <section class="slide">
+        <h2>Agenda</h2>
+        <ul>
+            <li>JUnit Rules</li>
+                <ul>
+                    <li>JUnit Rules</li>
+                    <li>Weltraumschaf Commons Rules</li>
+                    <li>How-To</li>
+                </ul>
+            <li>Delayed Repeater</li>
+        </ul>
+    </section>
+    
+    <section class="slide">
+      <h1>fertige JUnit Rules</h1>
+    </section>
+    
+    <section class="slide">
+        <h2>fertige JUnit Rules</h2>
+        <ul>
+            <li>TemporaryFolder Rule</li>
+            <li>ExpectedException Rule</li>
+            <li>ErrorCollector Rule</li>
+            <li>TestName Rule</li>
+            <li>Timeout Rule</li>
+            <li><a href="https://github.com/junit-team/junit/wiki/Rules" target="_blank">RTFM</a></li>
+        </ul>
+    </section>
+    
+    <section class="slide">
+        <h2>fertige JUnit Rules</h2>
+        <script type="syntaxhighlighter" class="brush: java">
+        public class DigitalAssetManagerTest {
+            @Rule
+            public TemporaryFolder tempFolder = new TemporaryFolder();
+
+            @Rule
+            public ExpectedException exception = ExpectedException.none();
+
+            @Test
+            public void countsAssets() throws IOException {
+                File icon = tempFolder.newFile("icon.png");
+                File assets = tempFolder.newFolder("assets");
+                createAssets(assets, 3);
+
+                DigitalAssetManager dam = new DigitalAssetManager(icon, assets);
+                assertEquals(3, dam.getAssetCount());
+            }
+
+            private void createAssets(File assets, int numberOfAssets) throws IOException {
+                ...
+            }
+
+            @Test
+            public void throwsIllegalArgumentExceptionIfIconIsNull() {
+                exception.expect(IllegalArgumentException.class);
+                exception.expectMessage("Icon is null, not a file, or doesn't exist.");
+                
+                new DigitalAssetManager(null, null);
+            }
+        }
+        </script>
+    </section>
+    
+    <section class="slide">
+      <h1>Weltraumschaf Commons Rules</h1>
+    </section>
+    
+    <section class="slide">
+        <h2>Weltraumschaf Commons Rules</h2>
+        <ul>
+            <li>Java Default Locale Rule</li>
+            <li>Repeater Rule</li>
+            <li>Captured Output Rule</li>
+        </li>
+    </section>
+    
     <section class="slide">
         <h2>Java Default Locale Rule ☹</h2>
         <script type="syntaxhighlighter" class="brush: java">
@@ -152,9 +229,61 @@
     </section>
 
     <section class="slide">
-        <h2>How To Write Rules</h2>
+      <h1>How To Write Rules</h1>
+    </section>
+    
+    <section class="slide">
+        <h2>How To Write Rules - org.junit.rules.ExternalResource</h2>
         <script type="syntaxhighlighter" class="brush: java">
+        public final class JavaDefaultLocale extends ExternalResource {
+        
+            private final Locale wanted;
+            private Locale backup;
+
+            public JavaDefaultLocale(Locale wanted) {
+                super();
+                this.wanted = Validate.notNull(wanted, "wanted");
+            }
+            
+            @Override
+            protected void before() throws Throwable {
+                backup = Locale.getDefault();
+                Locale.setDefault(wanted);
+            }
+
+            @Override
+            protected void after() {
+                Locale.setDefault(backup);
+            }   
+        }
         </script>
+    </section>
+    
+    <section class="slide">
+        <h2>How To Write Rules - org.junit.rules.TestRule</h2>
+        <script type="syntaxhighlighter" class="brush: java">
+        public final class MyRule implements TestRule {
+
+            @Override
+            public Statement apply(final Statement base, final Description description) {
+                return new Statement() {
+                    @Override
+                    public void evaluate() throws Throwable {
+                        try {
+                            // Do something before test.
+                            base.evaluate(); // Runs the test method.
+                            // Do something after test, unless failed.
+                        } finally {
+                            // Do something after test anyway.
+                        }
+                    }
+                };
+        }
+        </script>
+    </section>
+    
+    <section class="slide">
+        <h1>maybe useful</h1>
     </section>
     
     <section class="slide">
@@ -185,11 +314,12 @@
         <h2>More Infos</h2>
         <ul>
             <li>
-                Source: <a href="https://github.com/Weltraumschaf/commons/tree/master/commons-testing">
+                Source: <a href="https://github.com/Weltraumschaf/commons/tree/master/commons-testing" target="_blank">
                 https://github.com/Weltraumschaf/commons/tree/master/commons-testing</a>
             </li>
             <li>
-                Project: <a href="http://blog.weltraumschaf.de/commons/testing/index.html">Maven site</a>
+                Project: <a href="http://blog.weltraumschaf.de/commons/testing/index.html" target="_blank">
+                Maven site</a>
             </li>
         </ul>
         <h3>Dependency</h3>
@@ -206,7 +336,7 @@
     <section class="slide">
         <h1>Q&A</h1>
         <p class="vcenter" style="padding-top: 200px;">
-            <a href="https://github.com/Weltraumschaf/Slides/tree/master/Commons_Test_Tools">
+            <a href="https://github.com/Weltraumschaf/Slides/tree/master/Commons_Test_Tools" target="_blank">
                 https://github.com/Weltraumschaf/Slides/tree/master/Commons_Test_Tools
             </a>
         </p>
