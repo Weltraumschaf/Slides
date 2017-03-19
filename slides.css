@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Droid Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Droid_Serif/DroidSerif.ttf');
+}
+
+@font-face {
+    font-family: 'Droid Serif';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/Droid_Serif/DroidSerif-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Droid Serif';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./fonts/Droid_Serif/DroidSerif-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Inconsolata/Inconsolata-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/Inconsolata/Inconsolata-Bold.ttf');
+}
+
+body { font-family: 'Droid Serif'; }
+
+h1, h2, h3 {
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: normal;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h2, h3, p, pre {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+}
+
+.remark-code, .remark-inline-code { font-family: 'Source Code Pro'; }
+
+.bad {
+    color: #dd0000;
+}
+
+.good {
+    color: #009900;
+}
+
+.pull-left {
+    float: left;
+    width: 47%;
+}
+
+.pull-right {
+    float: right;
+    width: 47%;
+}
+
+.pull-right ~ p {
+    clear: both;
+}
+
+/* Two-column layout */
+.left-column {
+    color: #777;
+    width: 20%;
+    height: 92%;
+    float: left;
+}
+
+.left-column h2:last-of-type, .left-column h3:last-child {
+    color: #000;
+}
+
+.right-column {
+    width: 60%;
+    float: right;
+    padding-top: 1em;
+}
