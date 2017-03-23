@@ -12,5 +12,7 @@ Anschluß damit beginnen können ein Clean Code Devolper zu werden.
 
 ## Bio
 
-Sven Strittmatter ist Software Architekt und Technical Lead bei der iteratec GmbH 
-in Stuttgart.
+Sven Strittmatter  ist Software  Architekt und Technical  Lead bei  der iteratec
+GmbH in Stuttgart. Er entwickelt  seit fünzehn Jahren professionell Software und
+hat in  dieser Zeit  viele sog.  Legacy-Systeme gesehen und  so Clean  Coding zu
+schätzen gelernt.
