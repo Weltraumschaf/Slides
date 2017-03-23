@@ -9,3 +9,8 @@ Methodiken und  Techniken benutzt  werden und  warum es eine  gute Idee  ist ein
 Clean Code  Devolper zu sein. Dabei  versuche ich das ganze  so praxisorientiert
 wie  möglich zu  gestalten,  damait  Sie als  ZuhörerInnen  möglichst direkt  im
 Anschluß damit beginnen können ein Clean Code Devolper zu werden.
+
+## Bio
+
+Sven Strittmatter ist Software Architekt und Technical Lead bei der iteratec GmbH 
+in Stuttgart.
